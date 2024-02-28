@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Web Development</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 50%;
+        margin: 100px auto;
+        border: 1px solid #000;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+        color: #666;
+      }
+      a {
+        color: #1a0dab;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script>
+      "use strict";
+
+      const e = React.createElement;
+
+      const app = e(
+        "div",
+        { className: "container" },
+        e("h1", null, "Topics Covered"),
+        e(
+          "p",
+          null,
+          "The Following is a list of all the topics we cover in the MDN learning area."
+        ),
+        e(
+          "a",
+          { href: "https://developer.mozilla.org", target: "_blank" },
+          "Getting started with the web",
+          e(
+            "p",
+            null,
+            "Provides a practical introduction to web development for complete biginners."
+          )
+        ),
+
+        e(
+          "a",
+          { href: "https://developer.mozilla.org", target: "_blank" },
+          "HTML -- Structuring the web",
+          e(
+            "p",
+            null,
+            "HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in details."
+          )
+        ),
+
+        e(
+          "a",
+          { href: "https://developer.mozilla.org", target: "_blank" },
+          "CSS -- Styling the web",
+          e(
+            "p",
+            null,
+            "CSS is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in details."
+          )
+        )
+      );
+
+      ReactDOM.render(app, document.getElementById("root"));
+    </script>
+  </body>
+</html>
